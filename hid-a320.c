@@ -50,8 +50,6 @@ static int px_raw_event(struct hid_device *hid, struct hid_report *report,
 		 * drivers don't particularly care if there are in-band
 		 * 0-valued keys, so they don't stop parsing.
 		 */
-//		hid_info(hid, "original report id=%d size=%d data= %d %d %d %d %d %d %d %d %d\n", report->id,size,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8]);
-		//data[0]=0;
 		while (--idx > 1) {
 			if (data[idx] < 0xE0 || data[idx] > 0xE7)
 				continue;
@@ -59,28 +57,12 @@ static int px_raw_event(struct hid_device *hid, struct hid_report *report,
 			data[idx] = 0;
 		}
 		hid_report_raw_event(hid, HID_INPUT_REPORT, data, size, 0);
-//		hid_info(hid, "fixing report id=%d size=%d data= %d %d %d %d %d %d %d %d %d\n", report->id,size,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8]);
 		return 1;
 
 	default:	/* unknown report */
 		/* Unknown report type; pass upstream */
-/*		switch (size){
-		    case 2:
-			hid_info(hid, "unknown report type=%d size=%d data= %d %d\n", report->id,size,data[0],data[1]);
-			break;
-		    case 4:
-			hid_info(hid, "unknown report type=%d size=%d data= %d %d %d %d\n", report->id,size,data[0],data[1],data[2],data[3]);
-			break;
-		    case 9:
-			hid_info(hid, "unknown report type=%d size=%d data= %d %d %d %d %d %d %d %d %d\n", report->id,size,data[0],data[1],data[2],data[3],data[4],data[5],data[6],data[7],data[8]);
-			break;
-		    default:
-			hid_info(hid, "unknown report type %d size=%d\n", report->id,size);
-			break;
-		    }*/
 		break;
 	}
-
 	return 0;
 }
 
