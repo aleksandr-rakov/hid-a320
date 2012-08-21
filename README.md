@@ -8,7 +8,7 @@ Install
 -------
 Downloag and compile source code:
 ```
-git clone https://github.com/aleksandr-rakov/hid-a230.git
+git clone https://github.com/aleksandr-rakov/hid-a320.git
 cd hid-a320
 make
 sudo make install
