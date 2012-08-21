@@ -35,7 +35,7 @@ static int px_raw_event(struct hid_device *hid, struct hid_report *report,
 		/*
 		 * Convert in-band modifier key values into out of band
 		 * modifier bits and pull the key strokes from the report.
-		 * first byte olways [01]
+		 * First byte olways [01]
 		 * Thus a report data set which looked like:
 		 *
 		 * [01][00][00][E0][30][00][00][00][00]
