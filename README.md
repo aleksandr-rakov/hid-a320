@@ -11,14 +11,14 @@ Downloag and compile source code:
 git clone https://github.com/aleksandr-rakov/hid-a230.git
 cd a320
 make
-make install
+sudo make install
 ```
 
 Module load at boot time:
 On ubuntu 12.04:
 ```
 1: add hid-a320 to /etc/initramfs-tools/modules
-2: run update-initramfs -u
+2: run sudo update-initramfs -u
 3: reboot
 ```
 Note: after updating kernel you must reinstall driver.
