@@ -6,7 +6,7 @@ Fix Shift, Alt, and Ctrl keys press.
 
 Install
 -------
-Downloag and compile source code:
+Download and compile source code:
 ```
 git clone https://github.com/aleksandr-rakov/hid-a320.git
 cd hid-a320
@@ -14,17 +14,15 @@ make
 sudo make install
 ```
 
-Module load at boot time:
-On ubuntu 12.04:
-1: add ```hid-a320``` to ```/etc/initramfs-tools/modules```
-2: run ```sudo update-initramfs -u```
-3: reboot
+Module load at boot time (ubuntu 12.04 example):
+* add ```hid-a320``` to ```/etc/initramfs-tools/modules```
+* run ```sudo update-initramfs -u```
+* reboot
 
 Manual module load:
 Run as root:
 ```
 modprobe -r usbhid; modprobe hid-a320; modprobe usbhid
-
 ```
 
 Note
