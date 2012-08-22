@@ -21,9 +21,19 @@ On ubuntu 12.04:
 2: run sudo update-initramfs -u
 3: reboot
 ```
-Note: after updating kernel you must reinstall driver.
 
-Known bugs
-----------
+Manual module load:
+Run as root:
+```
+modprobe -r usbhid; modprobe hid-a320; modprobe usbhid
+
+```
+
+Note
+----
+After updating kernel you must reinstall driver.
+
+Issue
+-----
 (Ctrl Alt F4) (Ctrl Alt F7) (Ctrl Alt F11) Dont work - it is hadrware bug.
 Use RCtrl RAlt for this key combinations.
