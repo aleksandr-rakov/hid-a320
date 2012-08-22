@@ -90,6 +90,10 @@ static void px_remove(struct hid_device *hid)
 }
 
 static const struct hid_device_id px_devices[] = {
+/*
+Part of lsusb output on my computer:
+Bus 001 Device 004: ID 0a5c:4502 Broadcom Corp. Keyboard (Boot Interface Subclass)
+*/
 	{ HID_USB_DEVICE(0x0a5c, 0x4502) },
 	{ }
 };
