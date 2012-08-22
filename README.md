@@ -1,4 +1,4 @@
-hid-a230
+hid-a320
 ========
 
 Lenovo Ideacentre a320 linux keyboard driver.
@@ -16,11 +16,9 @@ sudo make install
 
 Module load at boot time:
 On ubuntu 12.04:
-```
-1: add hid-a320 to /etc/initramfs-tools/modules
-2: run sudo update-initramfs -u
+1: add ```hid-a320``` to ```/etc/initramfs-tools/modules```
+2: run ```sudo update-initramfs -u```
 3: reboot
-```
 
 Manual module load:
 Run as root:
