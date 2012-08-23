@@ -1,7 +1,10 @@
 hid-a320
 ========
 
-Lenovo Ideacentre a320 linux keyboard driver.
+Lenovo Ideacentre A320 linux keyboard driver.
+
+It should work on Ideacentre A300 and Ideacentre A320
+
 Fix Shift, Alt, and Ctrl keys press.
 
 Install
@@ -30,7 +33,7 @@ After updating kernel you must reinstall driver.
 
 Note
 ----
-To turn off numlock press Fn F11
+To turn off numlock press ```Fn F11```
 
 Issue
 -----
