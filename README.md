@@ -3,7 +3,7 @@ hid-a320
 
 Lenovo Ideacentre A320 linux keyboard driver.
 
-It should work on Ideacentre A300 and Ideacentre A320
+It should work on Ideacentre A300 and Ideacentre A310
 
 Fix Shift, Alt, and Ctrl keys press.
 
