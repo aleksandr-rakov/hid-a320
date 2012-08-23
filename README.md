@@ -14,20 +14,23 @@ make
 sudo make install
 ```
 
-Module load at boot time (ubuntu 12.04 example):
+Make module load at boot time (ubuntu 12.04 example):
 * add ```hid-a320``` to ```/etc/initramfs-tools/modules```
 * run ```sudo update-initramfs -u```
 * reboot
 
-Manual module load:
-Run as root:
+Or try manual module load:
 ```
-modprobe -r usbhid; modprobe hid-a320; modprobe usbhid
+sudo modprobe -r usbhid; sudo modprobe hid-a320; sudo modprobe usbhid;
 ```
 
 Note
 ----
 After updating kernel you must reinstall driver.
+
+Note
+----
+To turn off numlock press Fn F11
 
 Issue
 -----
