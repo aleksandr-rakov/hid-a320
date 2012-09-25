@@ -27,6 +27,10 @@ Or try manual module load:
 sudo modprobe -r usbhid; sudo modprobe hid-a320; sudo modprobe usbhid;
 ```
 
+For ubuntu users
+----------------
+Just run ```ubuntu-install``` script
+
 Note
 ----
 After updating kernel you must reinstall driver.

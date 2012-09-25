@@ -1,17 +1,24 @@
 #!/bin/sh
+#This script tested on ubuntu 12.04 LTS
 
 echo "Compiling"
 make clean
 make
+echo "Installing module"
 sudo make install
+
 echo "Reloading module"
 sudo modprobe -r usbhid;
 sudo modprobe -r hid-a320;
 sudo modprobe hid-a320;
 sudo modprobe usbhid;
+
 grep -q "hid-a320" /etc/initramfs-tools/modules
 if [ $? -ne 0 ] ; then
     echo "Adding hid-a320 to /etc/initramfs-tools/modules"
     sudo sh -c "echo hid-a320 >> /etc/initramfs-tools/modules"
 fi
+echo "Generating initrd"
 sudo update-initramfs -u
+
+echo "Done"
