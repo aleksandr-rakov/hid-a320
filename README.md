@@ -31,6 +31,11 @@ For ubuntu users
 ----------------
 Just run ```ubuntu-install``` script
 
+Auto compiling module on kernel update
+----------------
+Just run ```dkms-install``` script
+
+
 Note
 ----
 After updating kernel you must reinstall driver.
